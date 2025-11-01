@@ -9,11 +9,10 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse) {
   const exists = await Movie.findOne({});
   if (exists) return res.status(200).json({ message: "Already seeded" });
 
-  const response = await fetch("https://api.imdbapi.dev/titles");
+  const response = await fetch("https://filmy-dusky.vercel.app");
   const data = await response.json();
 
   const movies = data.titles.map((item: IMDBApiMovie) => ({
-    imdb_id: item.id,
     title: item.primaryTitle,
     original_title: item.originalTitle ?? null,
     image_url: item.primaryImage?.url ?? null,

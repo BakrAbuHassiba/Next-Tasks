@@ -28,20 +28,21 @@ type MovieDetailsProps = {
 export default function MovieDetails({ movie }: MovieDetailsProps) {
   const router = useRouter();
   const {
-    title,
-    original_title,
-    image_url,
-    year,
-    runtime,
-    genres,
-    rating,
-    votes,
-    plot,
     _id,
+    title,
+    description,
+    image,
+    releaseYear,
+    duration,
+    genre,
+    rating,
+    views,
+    director,
+    cast,
   } = movie;
 
   const [loading, setLoading] = useState(false);
-  const poster = image_url || '/images/placeholder.svg';
+  const poster = image || '/images/placeholder.svg';
 
   const handleDelete = async () => {
     setLoading(true);
@@ -57,7 +58,7 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
   return (
     <>
       <Head>
-        <title>{movie.title}</title>
+        <title>{title}</title>
       </Head>
 
       <div className="max-w-3xl mx-auto p-6 space-y-6">
@@ -101,9 +102,7 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
         </div>
 
         <h1 className="text-3xl font-bold">{title}</h1>
-        {original_title && original_title !== title && (
-          <p className="text-muted-foreground italic">({original_title})</p>
-        )}
+        {director && <p className="text-muted-foreground italic">Directed by {director}</p>}
 
         <div className="w-full max-w-md mx-auto">
           <div className="relative aspect-2/3 rounded-xl overflow-hidden shadow-lg group">
@@ -121,23 +120,28 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
 
         <div className="space-y-2 text-lg">
           <p>
-            <strong>Year:</strong> {year ?? 'N/A'}
+            <strong>Year:</strong> {releaseYear ?? 'N/A'}
           </p>
           <p>
-            <strong>Runtime:</strong> {runtime ?? 'N/A'} min
+            <strong>Duration:</strong> {duration ?? 'N/A'} min
           </p>
           <p>
-            <strong>Genres:</strong> {genres.join(', ') || 'N/A'}
+            <strong>Genres:</strong> {genre?.length ? genre.join(', ') : 'N/A'}
           </p>
           <p>
             <strong>Rating:</strong> {rating ? `${rating} ⭐` : 'N/A'} (
-            {votes?.toLocaleString() ?? 0} votes)
+            {views?.toLocaleString() ?? 0} views)
           </p>
+          {cast?.length ? (
+            <p>
+              <strong>Cast:</strong> {cast.join(', ')}
+            </p>
+          ) : null}
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold mb-2">Plot</h2>
-          <p>{plot || 'No plot available.'}</p>
+          <h2 className="text-2xl font-semibold mb-2">Description</h2>
+          <p>{description || 'No description available.'}</p>
         </div>
       </div>
     </>
@@ -146,9 +150,9 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/movies`);
-  const data = await res.json();
+  const data: Movie[] = await res.json();
 
-  const paths = data.map((movie: Movie) => ({
+  const paths = data.map((movie) => ({
     params: { id: movie._id },
   }));
 
@@ -156,12 +160,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  console.log(params?.id);
-
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/${params?.id}`
   );
-  const movie = await res.json();
+  const movie: Movie = await res.json();
 
   if (!movie?._id) return { notFound: true };
 

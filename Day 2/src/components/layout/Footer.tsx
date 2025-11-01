@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="py-4 border-t text-center text-sm text-muted-foreground">
-      © {new Date().getFullYear()} MovieBase — Built with ❤️ by Ali Mahmoud
+      © {new Date().getFullYear()} MovieBase — Built by Bakr Abuhassiba
     </footer>
   );
 }

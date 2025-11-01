@@ -5,7 +5,7 @@ import Link from 'next/link';
 type MovieItemProps = { movie: Movie };
 
 export default function MovieItem({ movie }: MovieItemProps) {
-  const poster = movie.image_url || '/images/placeholder.svg';
+  const poster = movie.image || '/images/placeholder.svg';
 
   return (
     <Link href={`/movies/${movie._id}`}>
@@ -24,14 +24,16 @@ export default function MovieItem({ movie }: MovieItemProps) {
 
         <div>
           <h2 className="font-semibold">
-            {movie.title} {movie.year && `(${movie.year})`}
+            {movie.title} {movie.releaseYear && `(${movie.releaseYear})`}
           </h2>
-          {movie.rating && (
+
+          {movie.rating !== undefined && (
             <p className="text-sm text-muted-foreground">⭐ {movie.rating}</p>
           )}
-          {movie.genres.length > 0 && (
+
+          {movie.genre && movie.genre.length > 0 && (
             <p className="text-xs text-muted-foreground">
-              {movie.genres.join(', ')}
+              {movie.genre.join(', ')}
             </p>
           )}
         </div>

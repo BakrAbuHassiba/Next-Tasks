@@ -10,14 +10,15 @@ export default function EditMoviePage({ movie }: EditMoviePageProps) {
   const initialValues = {
     _id: movie._id,
     title: movie.title,
-    original_title: movie.original_title ?? '',
-    image_url: movie.image_url ?? '',
-    year: movie.year ?? undefined,
-    runtime: movie.runtime ?? undefined,
-    genres: movie.genres?.join(', ') ?? '',
+    description: movie.description ?? '',
+    image: movie.image ?? '',
+    releaseYear: movie.releaseYear ?? undefined,
+    duration: movie.duration ?? undefined,
+    genre: movie.genre?.join(', ') ?? '',
     rating: movie.rating ?? undefined,
-    votes: movie.votes ?? undefined,
-    plot: movie.plot ?? '',
+    views: movie.views ?? undefined,
+    director: movie.director ?? '',
+    cast: movie.cast?.join(', ') ?? '',
   };
 
   return (

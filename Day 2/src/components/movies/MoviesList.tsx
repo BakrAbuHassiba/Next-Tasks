@@ -14,3 +14,4 @@ export default function MoviesList({ movies }: MoviesListProps) {
     </ul>
   );
 }
+

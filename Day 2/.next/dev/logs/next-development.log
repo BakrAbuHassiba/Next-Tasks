@@ -1,1 +1,9 @@
-[00:00:23.923] Server  LOG      ✓ Ready in 17.3s
+[00:00:01.859] Server  LOG      ✓ Ready in 1276ms
+[00:00:06.482] Server  ERROR   TypeError: movies.map is not a function
+[00:00:06.490] Server  ERROR    ⨯ TypeError: movies.map is not a function
+[00:00:06.494] Server  ERROR    ⨯ TypeError: movies.map is not a function
+[00:00:07.236] Browser ERROR   uncaughtError: TypeError: movies.map is not a function
+[00:00:08.794] Server  ERROR   TypeError: movies.map is not a function
+[00:00:08.797] Server  ERROR    ⨯ TypeError: movies.map is not a function
+[00:00:08.799] Server  ERROR    ⨯ TypeError: movies.map is not a function
+[00:00:08.996] Browser ERROR   uncaughtError: TypeError: movies.map is not a function

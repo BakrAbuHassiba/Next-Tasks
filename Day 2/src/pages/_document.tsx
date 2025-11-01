@@ -7,13 +7,13 @@ export default function Document() {
         <meta charSet="UTF-8" />
         <meta
           name="description"
-          content="MovieBase — Explore movies, ratings, and reviews."
+          content="Filmy — Explore movies, ratings, and reviews."
         />
         <meta
           name="keywords"
-          content="Movies, Film Database, Reviews, Ratings, MovieBase"
+          content="Movies, Film Database, Reviews, Ratings, Filmy"
         />
-        <meta name="author" content="MovieBase" />
+        <meta name="author" content="Filmy" />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.svg" />
