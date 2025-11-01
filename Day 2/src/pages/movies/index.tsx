@@ -31,6 +31,7 @@ export default function MoviesPage({ movies }: MoviesPageProps) {
           </Link>
         </div>
 
+        {/* Pass the correct movies array */}
         <MoviesList movies={movies} />
       </div>
     </>
@@ -40,13 +41,19 @@ export default function MoviesPage({ movies }: MoviesPageProps) {
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/movies`);
-    const movies = await res.json();
+    const data = await res.json();
+
+    // Extract the array from the API response
+    const movies = data.movies ?? [];
 
     return {
       props: { movies },
       revalidate: 86400, // 24 hours
     };
-  } catch {
-    return { props: { movies: [] } };
+  } catch (error) {
+    console.error(error);
+    return {
+      props: { movies: [] }, // fallback to empty array
+    };
   }
 };

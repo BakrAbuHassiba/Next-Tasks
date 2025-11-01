@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 
 type MovieFormValues = {
   title: string;

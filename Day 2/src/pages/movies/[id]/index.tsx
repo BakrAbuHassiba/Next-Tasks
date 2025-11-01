@@ -75,7 +75,6 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
               <Button>Edit</Button>
             </Link>
 
-            {/* Delete Dialog */}
             <AlertDialog>
               <AlertDialogTrigger asChild>
                 <Button variant="destructive">Delete</Button>
@@ -85,8 +84,7 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
                 <AlertDialogHeader>
                   <AlertDialogTitle>Delete Movie</AlertDialogTitle>
                   <AlertDialogDescription>
-                    This action cannot be undone. This movie will be permanently
-                    deleted.
+                    This action cannot be undone. This movie will be permanently deleted.
                   </AlertDialogDescription>
                 </AlertDialogHeader>
 
@@ -119,24 +117,11 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
         </div>
 
         <div className="space-y-2 text-lg">
-          <p>
-            <strong>Year:</strong> {releaseYear ?? 'N/A'}
-          </p>
-          <p>
-            <strong>Duration:</strong> {duration ?? 'N/A'} min
-          </p>
-          <p>
-            <strong>Genres:</strong> {genre?.length ? genre.join(', ') : 'N/A'}
-          </p>
-          <p>
-            <strong>Rating:</strong> {rating ? `${rating} ⭐` : 'N/A'} (
-            {views?.toLocaleString() ?? 0} views)
-          </p>
-          {cast?.length ? (
-            <p>
-              <strong>Cast:</strong> {cast.join(', ')}
-            </p>
-          ) : null}
+          <p><strong>Year:</strong> {releaseYear ?? 'N/A'}</p>
+          <p><strong>Duration:</strong> {duration ?? 'N/A'} min</p>
+          <p><strong>Genres:</strong> {genre?.length ? genre.join(', ') : 'N/A'}</p>
+          <p><strong>Rating:</strong> {rating ? `${rating} ⭐` : 'N/A'} ({views?.toLocaleString() ?? 0} views)</p>
+          {cast?.length && <p><strong>Cast:</strong> {cast.join(', ')}</p>}
         </div>
 
         <div>
@@ -149,23 +134,32 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/movies`);
-  const data: Movie[] = await res.json();
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/movies`);
+    const data = await res.json();
+    const movies: Movie[] = data.movies ?? [];
 
-  const paths = data.map((movie) => ({
-    params: { id: movie._id },
-  }));
+    const paths = movies.map((movie) => ({
+      params: { id: movie._id },
+    }));
 
-  return { paths, fallback: 'blocking' };
+    return { paths, fallback: 'blocking' };
+  } catch (error) {
+    console.error('Error fetching movies for paths:', error);
+    return { paths: [], fallback: 'blocking' };
+  }
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/${params?.id}`
-  );
-  const movie: Movie = await res.json();
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/${params?.id}`);
+    const movie: Movie = await res.json();
 
-  if (!movie?._id) return { notFound: true };
+    if (!movie?._id) return { notFound: true };
 
-  return { props: { movie }, revalidate: 3600 };
+    return { props: { movie }, revalidate: 3600 };
+  } catch (error) {
+    console.error('Error fetching movie details:', error);
+    return { notFound: true };
+  }
 };

@@ -5,11 +5,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/theme-toggle";
 import { Menu } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -22,57 +18,62 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 border-b bg-background sticky top-0 z-10">
-      <Link href="/" className="text-xl font-bold">
-        MovieBase
-      </Link>
+    <nav className="bg-black border-b border-red-700 sticky top-0 z-10">
+      <div className="flex justify-center items-center px-6 py-4">
+        <Link href="/" className="text-2xl font-bold text-red-500 mr-8">
+          Filmy
+        </Link>
 
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex gap-3 items-center">
-        {navLinks.map(({ href, label }) => {
-          const isActive = pathname === href;
-          return (
-            <Link key={href} href={href}>
-              <Button
-                variant={isActive ? "default" : "ghost"}
-                className={isActive ? "font-semibold" : ""}
-              >
-                {label}
+        <div className="hidden md:flex gap-6 items-center">
+          {navLinks.map(({ href, label }) => {
+            const isActive = pathname === href;
+            return (
+              <Link key={href} href={href}>
+                <Button
+                  variant={isActive ? "default" : "ghost"}
+                  className={isActive ? "font-semibold text-red-400" : "text-gray-300"}
+                >
+                  {label}
+                </Button>
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="hidden md:flex ml-8">
+          <ModeToggle />
+        </div>
+
+        <div className="md:hidden flex items-center gap-2 ml-auto">
+          <ModeToggle />
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="w-6 h-6" />
               </Button>
-            </Link>
-          );
-        })}
-        <ModeToggle />
-      </div>
+            </SheetTrigger>
 
-      {/* Mobile Menu Button */}
-      <div className="md:hidden flex items-center gap-2">
-        <ModeToggle />
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon">
-              <Menu className="w-6 h-6" />
-            </Button>
-          </SheetTrigger>
-
-          <SheetContent side="right" className="pr-6">
-            <div className="flex flex-col gap-4 mt-8 px-1">
-              {navLinks.map(({ href, label }) => {
-                const isActive = pathname === href;
-                return (
-                  <Link key={href} href={href}>
-                    <Button
-                      variant={isActive ? "default" : "ghost"}
-                      className={`w-full justify-start ${isActive ? "font-semibold" : ""}`}
-                    >
-                      {label}
-                    </Button>
-                  </Link>
-                );
-              })}
-            </div>
-          </SheetContent>
-        </Sheet>
+            <SheetContent side="right" className="pr-6">
+              <div className="flex flex-col gap-4 mt-8 px-1">
+                {navLinks.map(({ href, label }) => {
+                  const isActive = pathname === href;
+                  return (
+                    <Link key={href} href={href}>
+                      <Button
+                        variant={isActive ? "default" : "ghost"}
+                        className={`w-full justify-start ${
+                          isActive ? "font-semibold text-red-400" : "text-gray-300"
+                        }`}
+                      >
+                        {label}
+                      </Button>
+                    </Link>
+                  );
+                })}
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </nav>
   );

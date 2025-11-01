@@ -10,13 +10,9 @@ export default function HomePage() {
         <title>Filmy</title>
       </Head>
       <div className="text-center space-y-6 mt-20">
-        <h1 className="text-4xl font-bold">Welcome to Filmy</h1>
-        <p className="text-muted-foreground max-w-md mx-auto">
-          Explore movies and series using a public API. Built with Shadcn UI and
-          Next.js.
-        </p>
+        <h1 className="text-4xl font-bold">Filmy Website</h1>
         <Link href="/movies">
-          <Button size="lg">Browse Movies</Button>
+          <Button size="lg">Watch Movies Now!!!</Button>
         </Link>
       </div>
     </>

@@ -11,6 +11,7 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse) {
 
   const response = await fetch("https://filmy-dusky.vercel.app");
   const data = await response.json();
+  const moviesArray = data.movies ?? [];
 
   const movies = data.titles.map((item: IMDBApiMovie) => ({
     title: item.primaryTitle,
