@@ -79,12 +79,27 @@
     color: #ff9999;
   }
 
-  .card, .popover {
-    background-color: #1a0000;
-    color: #ffcccc;
-    border: 1px solid #8b0000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  }
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.card-body {
+  color: #555;
+}
 
   .btn-primary {
     background: linear-gradient(90deg, #000000, #8b0000);

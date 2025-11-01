@@ -3,9 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/theme-toggle";
-import { Menu } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -13,8 +10,8 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/movies", label: "Movies" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "/about", label: "About Us" },
+    { href: "/contact", label: "Contact Us" },
   ];
 
   return (
@@ -40,40 +37,6 @@ export default function Navbar() {
           })}
         </div>
 
-        <div className="hidden md:flex ml-8">
-          <ModeToggle />
-        </div>
-
-        <div className="md:hidden flex items-center gap-2 ml-auto">
-          <ModeToggle />
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="w-6 h-6" />
-              </Button>
-            </SheetTrigger>
-
-            <SheetContent side="right" className="pr-6">
-              <div className="flex flex-col gap-4 mt-8 px-1">
-                {navLinks.map(({ href, label }) => {
-                  const isActive = pathname === href;
-                  return (
-                    <Link key={href} href={href}>
-                      <Button
-                        variant={isActive ? "default" : "ghost"}
-                        className={`w-full justify-start ${
-                          isActive ? "font-semibold text-red-400" : "text-gray-300"
-                        }`}
-                      >
-                        {label}
-                      </Button>
-                    </Link>
-                  );
-                })}
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
       </div>
     </nav>
   );

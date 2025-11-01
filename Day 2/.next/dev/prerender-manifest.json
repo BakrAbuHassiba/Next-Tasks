@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "1891b48d1fc6803ab9126c2dde11153f",
-    "previewModeSigningKey": "6a7a4d73cb0ee83cdafa65707a4aa791eb39749b8c74152c37792417b5c6379f",
-    "previewModeEncryptionKey": "c3989983a0363ab9a7261c81edd36b07c48eb341234d48eb4a145773caac5b4b"
-  }
-}
+{"version":4,"routes":{"/movies/68d5810929408cefcc7198fe":{},"/movies/68d5810929408cefcc7198ff":{},"/movies/68d5810929408cefcc719900":{},"/movies/68d5810929408cefcc719901":{},"/movies/68d6d3620a163a8d965027ef":{},"/movies/68d6d3620a163a8d965027f0":{},"/movies/68d6d3620a163a8d965027f1":{},"/movies/68d6d3620a163a8d965027f2":{},"/movies/68d6d3620a163a8d965027f3":{},"/movies/68d6d3620a163a8d965027f4":{},"/movies/68d6d3620a163a8d965027f5":{},"/movies/68d6d3620a163a8d965027f6":{}},"dynamicRoutes":{"/movies/[id]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/movies/[id]","routeRegex":"^\\/movies\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"a7659e30404e048080b48e793d6f15cd","previewModeSigningKey":"f748175047aff3bf96cdd82d714e00536db463b2dff006d3dc7fb28c7b8fb75e","previewModeEncryptionKey":"993e362b46a8ba9a2057c77d8df412c88f6ce66dd7c9109a383b8acbbc861b30"}}

@@ -9,30 +9,30 @@ export default function MovieItem({ movie }: MovieItemProps) {
 
   return (
     <Link href={`/movies/${movie._id}`}>
-      <li className="p-4 rounded-lg border shadow-sm hover:bg-accent transition flex items-start gap-4">
-        <div className="relative w-20 h-[120px] shrink-0">
+      <li className="w-60 h-96 bg-gradient-to-br from-black via-red-900 to-red-700 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 border border-red-800 overflow-hidden flex flex-col">
+        <div className="relative w-full h-2/3">
           <Image
             src={poster}
             alt={movie.title}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
-            className="rounded-md object-cover"
+            className="object-cover"
             placeholder="blur"
             blurDataURL="/images/placeholder.svg"
           />
         </div>
 
-        <div>
-          <h2 className="font-semibold">
+        <div className="p-4 text-white flex flex-col gap-1 h-1/3">
+          <h2 className="font-bold text-lg">
             {movie.title} {movie.releaseYear && `(${movie.releaseYear})`}
           </h2>
 
           {movie.rating !== undefined && (
-            <p className="text-sm text-muted-foreground">⭐ {movie.rating}</p>
+            <p className="text-sm text-yellow-400">⭐ {movie.rating}</p>
           )}
 
           {movie.genre && movie.genre.length > 0 && (
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-red-200 truncate">
               {movie.genre.join(', ')}
             </p>
           )}

@@ -1,180 +1,281 @@
-[00:00:03.809] Server  LOG      ✓ Ready in 2.6s
-[00:00:06.911] Server  LOG      ○ Compiling / ...
-[00:00:14.478] Browser ERROR   uncaughtError: Error: ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+[00:00:01.878] Server  LOG      ✓ Ready in 1298ms
+[00:00:08.473] Server  LOG      ○ Compiling /contact ...
+[00:00:16.038] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+[00:01:39.410] Server  LOG      ✓ Compiled in 528ms
+[00:02:25.909] Server  LOG      ✓ Compiled in 224ms
+[00:03:16.340] Server  LOG      ✓ Compiled in 196ms
+[00:04:19.573] Server  LOG      ✓ Compiled in 229ms
+[00:04:37.179] Server  LOG      ✓ Compiled in 146ms
+[00:04:42.587] Server  LOG      ✓ Compiled in 88ms
+[00:04:54.257] Server  LOG      ✓ Compiled in 128ms
+[00:05:01.634] Server  LOG      ✓ Compiled in 112ms
+[00:05:05.084] Server  LOG      ✓ Compiled in 134ms
+[00:05:27.132] Server  LOG      ✓ Compiled in 408ms
+[00:05:27.252] Browser ERROR   ./src/components/layout/Navbar.tsx:53:24
+Parsing ecmascript source code failed
+  51 |               {/* <Button variant="ghost" size="icon"> */}
+  52 |                 <Menu className="w-6 h-6" />
+> 53 |               </Button>
+     |                        ^
+> 54 |             </SheetTrigger>
+     | ^^^^^^^^^^^^^
+  55 |
+  56 |             <SheetContent side="right" className="pr-6">
+  57 |               <div className="flex flex-col gap-4 mt-8 px-1">
+
+Expected '</', got 'jsx text (
+            )'
 
 Import trace:
-  Browser:
-    ./src/styles/globals.css
+  SSR:
+    ./src/components/layout/Navbar.tsx
+    ./src/components/layout/Layout.tsx
     ./src/pages/_app.tsx
+[00:05:27.252] Browser ERROR   ./src/components/layout/Navbar.tsx
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/src/components/layout/Navbar.tsx [ssr] (ecmascript)
 
+Caused by:
+- CJS module can't be async.
 
-[00:00:14.954] Browser ERROR   ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+Debug info:
+- An error occurred while generating the chunk item [project]/src/components/layout/Navbar.tsx [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
 
 Import trace:
-  Browser:
-    ./src/styles/globals.css
+  SSR:
+    ./src/components/layout/Navbar.tsx
+    ./src/components/layout/Layout.tsx
     ./src/pages/_app.tsx
-[00:00:14.954] Browser ERROR   ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+[00:05:30.643] Server  LOG      ✓ Compiled in 100ms
+[00:05:34.647] Server  LOG      ✓ Compiled in 304ms
+[00:05:47.759] Server  LOG      ✓ Compiled in 91ms
+[00:05:48.555] Browser ERROR   ./src/components/layout/Navbar.tsx:50:4
+Parsing ecmascript source code failed
+  48 |           <ModeToggle />
+  49 |           <Sheet>
+> 50 |  */}
+     |    ^
+  51 |
+  52 |             <SheetContent side="right" className="pr-6">
+  53 |               <div className="flex flex-col gap-4 mt-8 px-1">
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
 
 Import trace:
-  Browser:
-    ./src/styles/globals.css
+  SSR:
+    ./src/components/layout/Navbar.tsx
+    ./src/components/layout/Layout.tsx
     ./src/pages/_app.tsx
-[00:00:17.944] Browser ERROR   ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+[00:05:48.555] Browser ERROR   ./src/components/layout/Navbar.tsx
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/src/components/layout/Navbar.tsx [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/src/components/layout/Navbar.tsx [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
 
 Import trace:
-  Browser:
-    ./src/styles/globals.css
+  SSR:
+    ./src/components/layout/Navbar.tsx
+    ./src/components/layout/Layout.tsx
     ./src/pages/_app.tsx
-[00:00:21.952] Browser ERROR   ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+[00:05:49.471] Server  LOG      ✓ Compiled in 101ms
+[00:06:03.824] Server  LOG      ✓ Compiled in 87ms
+[00:06:04.561] Browser ERROR   ./src/components/layout/Navbar.tsx:73:5
+Parsing ecmascript source code failed
+  71 |         </div>
+  72 |       </div>
+> 73 |     </nav>
+     |     ^
+  74 |   );
+  75 | }
+  76 |
+
+Expression expected
 
 Import trace:
-  Browser:
-    ./src/styles/globals.css
+  SSR:
+    ./src/components/layout/Navbar.tsx
+    ./src/components/layout/Layout.tsx
     ./src/pages/_app.tsx
-[00:00:23.945] Browser ERROR   ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+[00:06:04.561] Browser ERROR   ./src/components/layout/Navbar.tsx:73:6
+Parsing ecmascript source code failed
+  71 |         </div>
+  72 |       </div>
+> 73 |     </nav>
+     |      ^^^^^
+  74 |   );
+  75 | }
+  76 |
+
+Unterminated regexp literal
 
 Import trace:
-  Browser:
-    ./src/styles/globals.css
+  SSR:
+    ./src/components/layout/Navbar.tsx
+    ./src/components/layout/Layout.tsx
     ./src/pages/_app.tsx
-[00:00:54.282] Server  LOG      ✓ Compiled in 1041ms
-[00:00:54.944] Browser ERROR   ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+[00:06:04.561] Browser ERROR   ./src/components/layout/Navbar.tsx
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/src/components/layout/Navbar.tsx [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/src/components/layout/Navbar.tsx [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
 
 Import trace:
-  Browser:
-    ./src/styles/globals.css
+  SSR:
+    ./src/components/layout/Navbar.tsx
+    ./src/components/layout/Layout.tsx
     ./src/pages/_app.tsx
-[00:00:57.947] Browser ERROR   ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+[00:06:05.370] Server  LOG      ✓ Compiled in 90ms
+[00:06:07.302] Server  LOG      ✓ Compiled in 165ms
+[00:06:31.878] Server  LOG      ✓ Compiled in 105ms
+[00:06:32.560] Browser ERROR   ./src/components/layout/Navbar.tsx:46:5
+Parsing ecmascript source code failed
+  44 |         </div>
+  45 |       </div>
+> 46 |     </nav>
+     |     ^
+  47 |   );
+  48 | }
+  49 |
+
+Expression expected
 
 Import trace:
-  Browser:
-    ./src/styles/globals.css
+  SSR:
+    ./src/components/layout/Navbar.tsx
+    ./src/components/layout/Layout.tsx
     ./src/pages/_app.tsx
-[00:01:00.949] Browser ERROR   ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+[00:06:32.560] Browser ERROR   ./src/components/layout/Navbar.tsx:46:6
+Parsing ecmascript source code failed
+  44 |         </div>
+  45 |       </div>
+> 46 |     </nav>
+     |      ^^^^^
+  47 |   );
+  48 | }
+  49 |
+
+Unterminated regexp literal
 
 Import trace:
-  Browser:
-    ./src/styles/globals.css
+  SSR:
+    ./src/components/layout/Navbar.tsx
+    ./src/components/layout/Layout.tsx
     ./src/pages/_app.tsx
-[00:01:08.950] Browser ERROR   ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+[00:06:32.560] Browser ERROR   ./src/components/layout/Navbar.tsx
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/src/components/layout/Navbar.tsx [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/src/components/layout/Navbar.tsx [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
 
 Import trace:
-  Browser:
-    ./src/styles/globals.css
+  SSR:
+    ./src/components/layout/Navbar.tsx
+    ./src/components/layout/Layout.tsx
     ./src/pages/_app.tsx
-[00:01:14.954] Browser ERROR   ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
-
-Import trace:
-  Browser:
-    ./src/styles/globals.css
-    ./src/pages/_app.tsx
-[00:01:15.948] Browser ERROR   ./src/styles/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: D:\ITI\Next\Day 2\src\styles\globals.css:1:1: Cannot apply unknown utility class `border-border`
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (D:\ITI\Next\Day 2\node_modules\@tailwindcss\postcss\dist\index.js:10:6912)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
-
-Import trace:
-  Browser:
-    ./src/styles/globals.css
-    ./src/pages/_app.tsx
-[00:01:17.390] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:03:23.635] Server  LOG      ✓ Compiled in 207ms
-[00:03:29.329] Server  LOG      ✓ Compiled in 126ms
-[00:03:32.206] Server  LOG      ✓ Compiled in 173ms
-[00:03:35.706] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
-[00:03:57.655] Server  LOG      ✓ Compiled in 160ms
-[00:04:05.491] Server  LOG      ✓ Compiled in 138ms
+[00:06:33.628] Server  LOG      ✓ Compiled in 83ms
+[00:06:36.715] Server  LOG      ✓ Compiled in 53ms
+[00:06:41.227] Server  LOG      ✓ Compiled in 312ms
+[00:07:02.022] Server  LOG      ✓ Compiled in 87ms
+[00:07:07.442] Server  LOG      ✓ Compiled in 88ms
+[00:07:13.705] Server  LOG      ✓ Compiled in 113ms
+[00:08:04.785] Server  LOG      ✓ Compiled in 279ms
+[00:08:04.791] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/pages/about.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:08:04.832] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/pages/about.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:08:07.990] Server  LOG      ✓ Compiled in 136ms
+[00:08:20.737] Server  LOG      ✓ Compiled in 126ms
+[00:09:01.190] Server  LOG      ✓ Compiled in 531ms
+[00:09:01.213] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/pages/contact.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:01.213] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/pages/contact.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:12.154] Server  LOG      ✓ Compiled in 140ms
+[00:09:14.163] Server  LOG      ✓ Compiled in 46ms
+[00:09:19.747] Server  LOG      ✓ Compiled in 117ms
+[00:09:27.519] Server  LOG      ✓ Compiled in 109ms
+[00:09:34.844] Server  LOG      ✓ Compiled in 75ms
+[00:11:32.546] Server  ERROR   TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:32.561] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:32.576] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:32.585] Browser LOG     Refreshing page data due to server-side change
+[00:11:32.585] Browser WARN    Image with src "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908771/the-dark-knight_nrzjbz.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:11:34.407] Server  ERROR   TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:34.416] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:34.422] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:34.647] Browser ERROR   uncaughtError: TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:34.887] Server  ERROR   TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:34.890] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:34.894] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:35.135] Browser ERROR   uncaughtError: TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:36.765] Server  ERROR   TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:36.769] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:36.771] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:36.968] Browser ERROR   uncaughtError: TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:51.476] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:11:51.665] Server  ERROR   TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:51.668] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:51.674] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:51.680] Server  LOG      ✓ Compiled in 109ms
+[00:11:52.033] Browser ERROR   uncaughtError: TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:55.348] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:11:55.511] Server  ERROR   TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:55.514] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:55.518] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:11:55.530] Server  LOG      ✓ Compiled in 89ms
+[00:11:55.767] Browser ERROR   uncaughtError: TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:12:17.511] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:17.716] Server  ERROR   TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:12:17.729] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:12:17.741] Server  ERROR    ⨯ TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:12:17.745] Server  LOG      ✓ Compiled in 124ms
+[00:12:18.257] Browser ERROR   uncaughtError: TypeError: Cannot destructure property '_id' of 'movie' as it is undefined.
+[00:12:30.602] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:30.861] Server  ERROR   TypeError: Cannot destructure property 'title' of 'movie' as it is undefined.
+[00:12:30.868] Server  ERROR    ⨯ TypeError: Cannot destructure property 'title' of 'movie' as it is undefined.
+[00:12:30.873] Server  ERROR    ⨯ TypeError: Cannot destructure property 'title' of 'movie' as it is undefined.
+[00:12:30.876] Server  LOG      ✓ Compiled in 153ms
+[00:12:31.233] Browser ERROR   uncaughtError: TypeError: Cannot destructure property 'title' of 'movie' as it is undefined.
+[00:12:42.429] Server  LOG      ✓ Compiled in 86ms
+[00:12:44.047] Server  LOG      ✓ Compiled in 53ms
+[00:12:46.623] Server  LOG      ✓ Compiled in 51ms
+[00:12:47.937] Server  LOG      ✓ Compiled in 103ms
+[00:14:35.343] Server  LOG     68d5810929408cefcc7198fe
+[00:15:03.036] Server  ERROR   TypeError: Invalid URL
+[00:15:03.048] Server  ERROR   Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:03.057] Server  ERROR    ⨯ Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:03.066] Server  ERROR    ⨯ Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:03.811] Server  ERROR   TypeError: Invalid URL
+[00:15:03.822] Server  ERROR   Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:03.835] Server  ERROR    ⨯ Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:03.847] Server  ERROR    ⨯ Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:04.148] Browser ERROR   uncaughtError: Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:24.199] Server  ERROR   TypeError: Invalid URL
+[00:15:24.204] Server  ERROR   Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:24.211] Server  ERROR    ⨯ Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:24.227] Server  ERROR    ⨯ Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:24.927] Server  ERROR   TypeError: Invalid URL
+[00:15:24.934] Server  ERROR   Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:24.942] Server  ERROR    ⨯ Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:24.948] Server  ERROR    ⨯ Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:15:25.252] Browser ERROR   uncaughtError: Error: Failed to parse src "asd" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)

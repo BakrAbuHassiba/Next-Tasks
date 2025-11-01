@@ -15,7 +15,6 @@ export default function Document() {
         />
         <meta name="author" content="Filmy" />
 
-        {/* Favicon */}
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <body className="bg-background text-foreground antialiased">

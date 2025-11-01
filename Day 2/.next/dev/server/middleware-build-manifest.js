@@ -13,6 +13,19 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/src_pages_index_2da965e7._.js",
       "static/chunks/turbopack-src_pages_index_22bc12cb._.js"
     ],
+    "/404": [
+      "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
+      "static/chunks/node_modules_next_dist_shared_lib_2202bc1a._.js",
+      "static/chunks/node_modules_next_dist_client_3ede7da4._.js",
+      "static/chunks/node_modules_next_dist_6024eba3._.js",
+      "static/chunks/node_modules_next_74932de7._.js",
+      "static/chunks/node_modules_react-dom_4411d9bd._.js",
+      "static/chunks/node_modules_tailwind-merge_dist_bundle-mjs_mjs_0ab97e45._.js",
+      "static/chunks/node_modules_36013418._.js",
+      "static/chunks/[root-of-the-server]__f2fcbf25._.js",
+      "static/chunks/src_pages_404_2da965e7._.js",
+      "static/chunks/turbopack-src_pages_404_b83971db._.js"
+    ],
     "/_app": [
       "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
       "static/chunks/node_modules_next_dist_shared_lib_4677c81f._.js",
@@ -21,11 +34,11 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/node_modules_next_eb5b9d22._.js",
       "static/chunks/node_modules_react-dom_4411d9bd._.js",
       "static/chunks/node_modules_tailwind-merge_dist_bundle-mjs_mjs_0ab97e45._.js",
-      "static/chunks/node_modules_d67556b7._.js",
-      "static/chunks/[root-of-the-server]__6d0d1d7b._.js",
+      "static/chunks/node_modules_e5bfa608._.js",
+      "static/chunks/[root-of-the-server]__614ec279._.js",
       "static/chunks/src_styles_globals_5bb75e7e.css",
       "static/chunks/src_pages__app_2da965e7._.js",
-      "static/chunks/turbopack-src_pages__app_547b0633._.js"
+      "static/chunks/turbopack-src_pages__app_8c3f5f2c._.js"
     ],
     "/_error": [
       "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
@@ -42,27 +55,25 @@ globalThis.__BUILD_MANIFEST = {
     ],
     "/about": [
       "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
-      "static/chunks/node_modules_next_dist_shared_lib_cf5b50a6._.js",
+      "static/chunks/node_modules_next_dist_shared_lib_82dc2e9d._.js",
       "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
       "static/chunks/node_modules_next_dist_6024eba3._.js",
-      "static/chunks/node_modules_next_head_6b89d279.js",
       "static/chunks/node_modules_react-dom_4411d9bd._.js",
       "static/chunks/node_modules_f1be3ba2._.js",
       "static/chunks/[root-of-the-server]__90a68db8._.js",
       "static/chunks/src_pages_about_2da965e7._.js",
-      "static/chunks/turbopack-src_pages_about_d3120e87._.js"
+      "static/chunks/turbopack-src_pages_about_c463a10e._.js"
     ],
     "/contact": [
       "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
-      "static/chunks/node_modules_next_dist_shared_lib_cf5b50a6._.js",
+      "static/chunks/node_modules_next_dist_shared_lib_82dc2e9d._.js",
       "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
       "static/chunks/node_modules_next_dist_6024eba3._.js",
-      "static/chunks/node_modules_next_head_6b89d279.js",
       "static/chunks/node_modules_react-dom_4411d9bd._.js",
       "static/chunks/node_modules_f1be3ba2._.js",
       "static/chunks/[root-of-the-server]__4ef9623e._.js",
       "static/chunks/src_pages_contact_2da965e7._.js",
-      "static/chunks/turbopack-src_pages_contact_362eb22d._.js"
+      "static/chunks/turbopack-src_pages_contact_450aa76c._.js"
     ],
     "/movies": [
       "static/chunks/node_modules_next_dist_compiled_cd3fa330._.js",
@@ -76,6 +87,45 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/[root-of-the-server]__768cd800._.js",
       "static/chunks/src_pages_movies_index_tsx_2da965e7._.js",
       "static/chunks/turbopack-src_pages_movies_index_tsx_4cb247fb._.js"
+    ],
+    "/movies/[id]": [
+      "static/chunks/node_modules_next_dist_compiled_cd3fa330._.js",
+      "static/chunks/node_modules_next_dist_shared_lib_8a2559cf._.js",
+      "static/chunks/node_modules_next_dist_client_9b1b49db._.js",
+      "static/chunks/node_modules_next_dist_6024eba3._.js",
+      "static/chunks/node_modules_next_ae6c005f._.js",
+      "static/chunks/node_modules_react-dom_4411d9bd._.js",
+      "static/chunks/node_modules_tailwind-merge_dist_bundle-mjs_mjs_0ab97e45._.js",
+      "static/chunks/node_modules_6457d8ab._.js",
+      "static/chunks/[root-of-the-server]__9f69ed4b._.js",
+      "static/chunks/src_pages_movies_[id]_index_tsx_2da965e7._.js",
+      "static/chunks/turbopack-src_pages_movies_[id]_index_tsx_f7184e78._.js"
+    ],
+    "/movies/[id]/edit": [
+      "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
+      "static/chunks/node_modules_next_dist_shared_lib_82dc2e9d._.js",
+      "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
+      "static/chunks/node_modules_next_dist_6024eba3._.js",
+      "static/chunks/node_modules_next_router_104fab1c.js",
+      "static/chunks/node_modules_react-dom_4411d9bd._.js",
+      "static/chunks/node_modules_tailwind-merge_dist_bundle-mjs_mjs_0ab97e45._.js",
+      "static/chunks/node_modules_ab5fc072._.js",
+      "static/chunks/[root-of-the-server]__4e62af9d._.js",
+      "static/chunks/src_pages_movies_[id]_edit_tsx_2da965e7._.js",
+      "static/chunks/turbopack-src_pages_movies_[id]_edit_tsx_88bcaf7a._.js"
+    ],
+    "/movies/new": [
+      "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
+      "static/chunks/node_modules_next_dist_shared_lib_2202bc1a._.js",
+      "static/chunks/node_modules_next_dist_client_3ede7da4._.js",
+      "static/chunks/node_modules_next_dist_6024eba3._.js",
+      "static/chunks/node_modules_next_1e915a6b._.js",
+      "static/chunks/node_modules_react-dom_4411d9bd._.js",
+      "static/chunks/node_modules_tailwind-merge_dist_bundle-mjs_mjs_0ab97e45._.js",
+      "static/chunks/node_modules_2c292659._.js",
+      "static/chunks/[root-of-the-server]__54c689b8._.js",
+      "static/chunks/src_pages_movies_new_tsx_2da965e7._.js",
+      "static/chunks/turbopack-src_pages_movies_new_tsx_d77bd237._.js"
     ]
   },
   "devFiles": [],

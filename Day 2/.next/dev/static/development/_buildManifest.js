@@ -2,6 +2,9 @@ self.__BUILD_MANIFEST = {
   "/": [
     "static/chunks/pages/index.js"
   ],
+  "/404": [
+    "static/chunks/pages/404.js"
+  ],
   "/_error": [
     "static/chunks/pages/_error.js"
   ],
@@ -13,6 +16,15 @@ self.__BUILD_MANIFEST = {
   ],
   "/movies": [
     "static/chunks/pages/movies.js"
+  ],
+  "/movies/[id]": [
+    "static/chunks/pages/movies/[id].js"
+  ],
+  "/movies/[id]/edit": [
+    "static/chunks/pages/movies/[id]/edit.js"
+  ],
+  "/movies/new": [
+    "static/chunks/pages/movies/new.js"
   ],
   "__rewrites": {
     "afterFiles": [],

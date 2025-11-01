@@ -1,9 +1,15 @@
 {
   "/": "pages/index.js",
+  "/404": "pages/404.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/about": "pages/about.js",
+  "/api/movies": "pages/api/movies.js",
+  "/api/movies/[id]": "pages/api/movies/[id].js",
   "/contact": "pages/contact.js",
-  "/movies": "pages/movies.js"
+  "/movies": "pages/movies.js",
+  "/movies/[id]": "pages/movies/[id].js",
+  "/movies/[id]/edit": "pages/movies/[id]/edit.js",
+  "/movies/new": "pages/movies/new.js"
 }

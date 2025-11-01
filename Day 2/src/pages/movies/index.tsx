@@ -21,8 +21,6 @@ export default function MoviesPage({ movies }: MoviesPageProps) {
 
       <div className="p-6 space-y-6">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-semibold">Watch now</h1>
-
           <Link href="/movies/new">
             <Button className="flex items-center gap-2">
               <Plus className="h-4 w-4" />
@@ -30,8 +28,6 @@ export default function MoviesPage({ movies }: MoviesPageProps) {
             </Button>
           </Link>
         </div>
-
-        {/* Pass the correct movies array */}
         <MoviesList movies={movies} />
       </div>
     </>
