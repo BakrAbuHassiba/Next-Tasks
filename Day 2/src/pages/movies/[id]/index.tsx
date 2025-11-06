@@ -1,11 +1,11 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   AlertDialog,
   AlertDialogTrigger,
@@ -16,10 +16,10 @@ import {
   AlertDialogFooter,
   AlertDialogCancel,
   AlertDialogAction,
-} from '@/components/ui/alert-dialog';
-import { ArrowLeft } from 'lucide-react';
+} from "@/components/ui/alert-dialog";
+import { ArrowLeft } from "lucide-react";
 
-import { Movie } from '@/types/movie';
+import { Movie } from "@/types/movie";
 
 type MovieDetailsProps = {
   movie: Movie;
@@ -42,17 +42,22 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
   } = movie;
 
   const [loading, setLoading] = useState(false);
-  const poster = image || '/images/placeholder.svg';
-
+  const poster = image || "/images/placeholder.svg";
+  console.log("Poster value:", poster);
+  // Validate poster source
+  const validPoster =
+    poster && (poster.startsWith("/") || poster.startsWith("http"))
+      ? poster
+      : "/images/placeholder.svg"; // 👈 fallback image from /public/images/
   const handleDelete = async () => {
     setLoading(true);
 
     await fetch(`/api/movies/${_id}`, {
-      method: 'DELETE',
+      method: "DELETE",
     });
 
     setLoading(false);
-    router.push('/movies');
+    router.push("/movies");
   };
 
   return (
@@ -84,14 +89,15 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
                 <AlertDialogHeader>
                   <AlertDialogTitle>Delete Movie</AlertDialogTitle>
                   <AlertDialogDescription>
-                    This action cannot be undone. This movie will be permanently deleted.
+                    This action cannot be undone. This movie will be permanently
+                    deleted.
                   </AlertDialogDescription>
                 </AlertDialogHeader>
 
                 <AlertDialogFooter>
                   <AlertDialogCancel>Cancel</AlertDialogCancel>
                   <AlertDialogAction onClick={handleDelete}>
-                    {loading ? 'Deleting...' : 'Delete'}
+                    {loading ? "Deleting..." : "Delete"}
                   </AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
@@ -100,33 +106,48 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
         </div>
 
         <h1 className="text-3xl font-bold">{title}</h1>
-        {director && <p className="text-muted-foreground italic">Directed by {director}</p>}
+        {director && (
+          <p className="text-muted-foreground italic">Directed by {director}</p>
+        )}
 
         <div className="w-full max-w-md mx-auto">
           <div className="relative aspect-2/3 rounded-xl overflow-hidden shadow-lg group">
             <Image
-              src={poster}
-              alt={title}
+              src={validPoster}
+              alt={movie.title || "Movie poster"}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
               placeholder="blur"
-              blurDataURL="/blur-placeholder.png"
+              blurDataURL="/images/placeholder.svg"
             />
           </div>
         </div>
 
         <div className="space-y-2 text-lg">
-          <p><strong>Year:</strong> {releaseYear ?? 'N/A'}</p>
-          <p><strong>Duration:</strong> {duration ?? 'N/A'} min</p>
-          <p><strong>Genres:</strong> {genre?.length ? genre.join(', ') : 'N/A'}</p>
-          <p><strong>Rating:</strong> {rating ? `${rating} ⭐` : 'N/A'} ({views?.toLocaleString() ?? 0} views)</p>
-          {cast?.length && <p><strong>Cast:</strong> {cast.join(', ')}</p>}
+          <p>
+            <strong>Year:</strong> {releaseYear ?? "N/A"}
+          </p>
+          <p>
+            <strong>Duration:</strong> {duration ?? "N/A"} min
+          </p>
+          <p>
+            <strong>Genres:</strong> {genre?.length ? genre.join(", ") : "N/A"}
+          </p>
+          <p>
+            <strong>Rating:</strong> {rating ? `${rating} ⭐` : "N/A"} (
+            {views?.toLocaleString() ?? 0} views)
+          </p>
+          {cast?.length && (
+            <p>
+              <strong>Cast:</strong> {cast.join(", ")}
+            </p>
+          )}
         </div>
 
         <div>
           <h2 className="text-2xl font-semibold mb-2">Description</h2>
-          <p>{description || 'No description available.'}</p>
+          <p>{description || "No description available."}</p>
         </div>
       </div>
     </>
@@ -143,23 +164,25 @@ export const getStaticPaths: GetStaticPaths = async () => {
       params: { id: movie._id },
     }));
 
-    return { paths, fallback: 'blocking' };
+    return { paths, fallback: "blocking" };
   } catch (error) {
-    console.error('Error fetching movies for paths:', error);
-    return { paths: [], fallback: 'blocking' };
+    console.error("Error fetching movies for paths:", error);
+    return { paths: [], fallback: "blocking" };
   }
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/${params?.id}`);
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/${params?.id}`
+    );
     const movie: Movie = await res.json();
 
     if (!movie?._id) return { notFound: true };
 
     return { props: { movie }, revalidate: 3600 };
   } catch (error) {
-    console.error('Error fetching movie details:', error);
+    console.error("Error fetching movie details:", error);
     return { notFound: true };
   }
 };

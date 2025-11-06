@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/movies/68d5810929408cefcc7198fe":{},"/movies/68d5810929408cefcc7198ff":{},"/movies/68d5810929408cefcc719900":{},"/movies/68d5810929408cefcc719901":{},"/movies/68d6d3620a163a8d965027ef":{},"/movies/68d6d3620a163a8d965027f0":{},"/movies/68d6d3620a163a8d965027f1":{},"/movies/68d6d3620a163a8d965027f2":{},"/movies/68d6d3620a163a8d965027f3":{},"/movies/68d6d3620a163a8d965027f4":{},"/movies/68d6d3620a163a8d965027f5":{},"/movies/68d6d3620a163a8d965027f6":{}},"dynamicRoutes":{"/movies/[id]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/movies/[id]","routeRegex":"^\\/movies\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"a7659e30404e048080b48e793d6f15cd","previewModeSigningKey":"f748175047aff3bf96cdd82d714e00536db463b2dff006d3dc7fb28c7b8fb75e","previewModeEncryptionKey":"993e362b46a8ba9a2057c77d8df412c88f6ce66dd7c9109a383b8acbbc861b30"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "f12b9b5d0f548fb08a6a2957d67fb847",
+    "previewModeSigningKey": "e7c46bb49ef5894127993a38f0ab6e65d489457ae42f4c8446a088b095ea96cd",
+    "previewModeEncryptionKey": "37d656eb339ccc9c62c87f43758a427c184b0e966cb2eb9b64508a9117f879a9"
+  }
+}

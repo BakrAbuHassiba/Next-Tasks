@@ -1,17 +1,20 @@
-import '@/styles/globals.css';
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+import { SessionProvider } from "next-auth/react";
+import { ThemeProvider } from "@/components/ui/theme-provider";
+import Layout from "@/components/layout/Layout";
 
-import type { AppProps } from 'next/app';
-
-import { ThemeProvider } from '@/components/ui/theme-provider';
-import Layout from '@/components/layout/Layout';
-
-
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <SessionProvider session={session}>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </SessionProvider>
   );
 }

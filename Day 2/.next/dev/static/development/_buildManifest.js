@@ -2,29 +2,11 @@ self.__BUILD_MANIFEST = {
   "/": [
     "static/chunks/pages/index.js"
   ],
-  "/404": [
-    "static/chunks/pages/404.js"
-  ],
-  "/_error": [
-    "static/chunks/pages/_error.js"
-  ],
-  "/about": [
-    "static/chunks/pages/about.js"
-  ],
-  "/contact": [
-    "static/chunks/pages/contact.js"
+  "/auth/login": [
+    "static/chunks/pages/auth/login.js"
   ],
   "/movies": [
     "static/chunks/pages/movies.js"
-  ],
-  "/movies/[id]": [
-    "static/chunks/pages/movies/[id].js"
-  ],
-  "/movies/[id]/edit": [
-    "static/chunks/pages/movies/[id]/edit.js"
-  ],
-  "/movies/new": [
-    "static/chunks/pages/movies/new.js"
   ],
   "__rewrites": {
     "afterFiles": [],
@@ -37,13 +19,20 @@ self.__BUILD_MANIFEST = {
     "/_app",
     "/_error",
     "/about",
+    "/api/auth/register",
+    "/api/auth/[...nextauth]",
     "/api/movies",
     "/api/movies/[id]",
     "/api/seed",
+    "/auth/login",
+    "/auth/register",
+    "/auth/signin",
     "/contact",
+    "/dashboard",
     "/movies",
     "/movies/new",
     "/movies/[id]",
-    "/movies/[id]/edit"
+    "/movies/[id]/edit",
+    "/profile"
   ]
 };self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
