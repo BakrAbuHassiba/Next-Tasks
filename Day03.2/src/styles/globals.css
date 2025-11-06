@@ -1,0 +1,127 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+:root {
+  --radius: 0.625rem;
+  --background: linear-gradient(135deg, #000000, #4b0000, #8b0000);
+  --foreground: #ff4d4d;
+  --card: #1a0000;
+  --card-foreground: #ff4d4d;
+  --popover: #1a0000;
+  --popover-foreground: #ff4d4d;
+  --primary: linear-gradient(90deg, #000000, #8b0000);
+  --primary-foreground: #ffdddd;
+  --secondary: #4b0000;
+  --secondary-foreground: #ff9999;
+  --muted: #660000;
+  --muted-foreground: #ff6666;
+  --accent: #990000;
+  --accent-foreground: #ffcccc;
+  --destructive: #cc0000;
+  --border: #8b0000;
+  --input: #4b0000;
+  --ring: #ff0000;
+  --sidebar: #1a0000;
+  --sidebar-foreground: #ff4d4d;
+  --sidebar-primary: #8b0000;
+  --sidebar-primary-foreground: #ffcccc;
+  --sidebar-accent: #990000;
+  --sidebar-accent-foreground: #ff9999;
+  --sidebar-border: #660000;
+  --sidebar-ring: #cc0000;
+}
+
+@layer base {
+  * {
+    /* outline: 2px solid var(--ring); */
+    outline: none;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: 'Geist Sans', sans-serif;
+    min-height: 100vh;
+  }
+
+  a {
+    color: #ff4d4d;
+  }
+  a:hover {
+    color: #ff6666;
+  }
+
+  button {
+    background-color: #8b0000;
+    color: #ffcccc;
+    cursor: pointer;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #ff4d4d;
+  }
+
+  input, textarea, select {
+    background-color: #4b0000;
+    color: #ffcccc;
+    border: 1px solid #8b0000;
+    placeholder-color: #ff6666;
+  }
+
+  .navbar {
+    background-color: #000000;
+    border-bottom: 1px solid #8b0000;
+  }
+
+  .footer {
+    background-color: #000000;
+    border-top: 1px solid #8b0000;
+    color: #ff9999;
+  }
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.card-body {
+  color: #555;
+}
+
+  .btn-primary {
+    background: linear-gradient(90deg, #000000, #8b0000);
+    color: #ffdddd;
+  }
+
+  .btn-destructive {
+    background-color: #cc0000;
+    color: #ffcccc;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1a0000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #8b0000;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cc0000;
+  }
+}
