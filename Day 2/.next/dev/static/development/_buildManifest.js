@@ -2,11 +2,8 @@ self.__BUILD_MANIFEST = {
   "/": [
     "static/chunks/pages/index.js"
   ],
-  "/auth/login": [
-    "static/chunks/pages/auth/login.js"
-  ],
-  "/movies": [
-    "static/chunks/pages/movies.js"
+  "/404": [
+    "static/chunks/pages/404.js"
   ],
   "__rewrites": {
     "afterFiles": [],
@@ -19,20 +16,16 @@ self.__BUILD_MANIFEST = {
     "/_app",
     "/_error",
     "/about",
-    "/api/auth/register",
     "/api/auth/[...nextauth]",
     "/api/movies",
     "/api/movies/[id]",
     "/api/seed",
-    "/auth/login",
-    "/auth/register",
-    "/auth/signin",
+    "/auth/profile",
     "/contact",
     "/dashboard",
     "/movies",
     "/movies/new",
     "/movies/[id]",
-    "/movies/[id]/edit",
-    "/profile"
+    "/movies/[id]/edit"
   ]
 };self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()

@@ -8,7 +8,6 @@ export default function ProfilePage() {
   const { data: session, status } = useSession();
   const router = useRouter();
 
-
   useEffect(() => {
     if (status === "unauthenticated") router.push("/auth/login");
   }, [status, router]);
@@ -39,12 +38,7 @@ export default function ProfilePage() {
         <h2 className="text-xl font-semibold">{user?.name ?? "Guest User"}</h2>
         <p className="text-gray-400">{user?.email}</p>
 
-        <button
-          onClick={() => signOut()}
-          className="mt-6 bg-red-600 hover:bg-red-700 w-full p-2 rounded"
-        >
-          Logout
-        </button>
+
       </div>
     </div>
   );

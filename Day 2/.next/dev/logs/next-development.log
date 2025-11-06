@@ -1,21 +1,5 @@
-[00:00:08.087] Server  LOG      ✓ Ready in 6s
-[00:00:11.237] Server  LOG      ○ Compiling /movies ...
-[00:00:20.795] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908580/Thor_Ragnarok_xffyuf.jpg"
-[00:00:20.811] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908578/dune_hhi5ds.jpg"
-[00:00:20.817] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908771/the-dark-knight_nrzjbz.jpg"
-[00:00:20.821] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908579/The_Sixth_Sense_ehwxrw.png"
-[00:00:20.825] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908578/midnight-in-paris_qngb9y.jpg"
-[00:00:20.830] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908578/iron-man_jodfd8.jpg"
-[00:00:20.836] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758907898/movies/r4maywiqsoxjlb3cp781.jpg"
-[00:00:20.839] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908820/intersteller_lhinsw.jpg"
-[00:00:20.841] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908579/Endgame_rhix0v.jpg"
-[00:00:20.845] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908579/spider-man-no-way-home_qsb3dh.webp"
-[00:00:20.851] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908578/infinity-war_mdrrjc.jpg"
-[00:00:20.854] Server  LOG     Poster value: "https://res.cloudinary.com/dgpxrx8cp/image/upload/v1758908578/conjuring_dlubex.jpg"
-[00:00:20.857] Server  LOG     Poster value: "asd"
-[00:00:20.859] Server  LOG     Poster value: "/images/placeholder.svg"
-[00:00:22.713] Server  WARN    [next-auth][warn][DEBUG_ENABLED] "\nhttps://next-auth.js.org/warnings#debug_enabled"
-[00:00:27.862] Server  LOG     [next-auth][debug][CREATE_STATE] {}
-[00:00:27.948] Server  LOG     [next-auth][debug][GET_AUTHORIZATION_URL] {}
-[00:00:32.603] Server  ERROR   [next-auth][error][OAUTH_CALLBACK_ERROR] "\nhttps://next-auth.js.org/errors#oauth_callback_error" "outgoing request timed out after 3500ms" {}
-[00:00:38.398] Server  ERROR   [next-auth][error][SIGNIN_OAUTH_ERROR] "\nhttps://next-auth.js.org/errors#signin_oauth_error" "outgoing request timed out after 3500ms" {}
+[00:00:07.258] Server  LOG      ✓ Ready in 4.8s
+[00:00:10.350] Server  LOG      ○ Compiling / ...
+[00:00:19.581] Server  ERROR   [next-auth][error][SIGNIN_OAUTH_ERROR] "\nhttps://next-auth.js.org/errors#signin_oauth_error" "outgoing request timed out after 3500ms" {}
+[00:00:28.056] Server  ERROR   [next-auth][error][OAUTH_CALLBACK_ERROR] "\nhttps://next-auth.js.org/errors#oauth_callback_error" "outgoing request timed out after 3500ms" {}
+[00:00:34.832] Server  ERROR   PageNotFoundError: Cannot find module for page: /profile
